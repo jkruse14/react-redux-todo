@@ -18,20 +18,25 @@ import {
 
 const { SHOW_ALL } = VISIBILITY_FILTERS;
 
+import { incrementNextId } from './components/AppActions'
+
 let store = createStore(todoApp, /*window.STATE_FROM_SERVER*/);
 
 /**
-Evertime state changes, log it
+Everytime state changes, log it
 Note: subscribe returns a function for unregistering the listener
 */
-let unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
-);
+// let unsubscribe = store.subscribe(() =>
+//   console.log(store.getState())
+// );
 
 //Dispatch some events
-store.dispatch(addTodo('learn about actions', moment().subtract(1, 'day').format('YYYY-MM-DD')))
-store.dispatch(addTodo('learn about reducers', moment().format('YYYY-MM-DD')))
-store.dispatch(addTodo('learn about store', moment().format('YYYY-MM-DD')))
+store.dispatch(addTodo('learn about actions', moment().subtract(1, 'day').format('YYYY-MM-DD'), 0))
+store.dispatch(incrementNextId());
+store.dispatch(addTodo('learn about reducers', moment().format('YYYY-MM-DD'), 1))
+store.dispatch(incrementNextId());
+store.dispatch(addTodo('learn about store', moment().format('YYYY-MM-DD'), 2))
+store.dispatch(incrementNextId());
 store.dispatch(toggleTodo(0))
 store.dispatch(toggleTodo(1))
 store.dispatch(setVisibilityFilter(VISIBILITY_FILTERS.SHOW_COMPLETED))

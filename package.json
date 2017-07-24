@@ -1,5 +1,5 @@
 {
-  "name": "react-redux-todo",
+  "name": "jpk-react-redux-todo",
   "version": "1.0.0",
   "description": "simple todo list to learn react redux",
   "main": "index.js",

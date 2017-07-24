@@ -7,15 +7,24 @@ export function todos(state = [], action) {
   switch(action.type) {
     case ADD_TODO:
       let new_todo = {
-        id: state.length,
+        id: action.id,
         text: action.text,
         due_date: action.due_date,
         completed: false
       }
+
       return [
           ...state,
           new_todo
         ];
+    case DELETE_TODO:
+      let todos = [];
+      for(let i = 0; i < state.length; i++) {
+        if(state[i].id !== action.id) {
+          todos.push(state[i]);
+        }
+      }
+      return todos;
     case UPDATE_TODO:
       return [
         ...state.map((todo, index) => {

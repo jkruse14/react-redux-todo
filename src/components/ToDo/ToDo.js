@@ -2,7 +2,7 @@ import React from 'react'
 import {Button, ButtonGroup} from 'react-bootstrap'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { UPDATE_TODO } from '../ToDo/ToDoActions'
+import { UPDATE_TODO, updateTodo, deleteTodo, toggleTodo } from '../ToDo/ToDoActions'
 import { openModal } from '../Modals/ModalsActions'
 
 export class ToDo extends React.Component {
@@ -17,6 +17,7 @@ export class ToDo extends React.Component {
     }
     this.onEditClick = props.onEditClick
     this.changeTodoStatus = props.changeTodoStatus;
+    this.deleteTodo = props.deleteTodo;
     this.dispatch = props.dispatch;
   }
 
@@ -33,6 +34,10 @@ export class ToDo extends React.Component {
     this.onEditClick();
   }
 
+  handleDeleteTodo() {
+    this.deleteTodo(this.state.id)
+  }
+
   render() {
     return (
       <tr>
@@ -44,6 +49,7 @@ export class ToDo extends React.Component {
             <Button id='show-updatetodo-modal'
                     bsStyle='primary'
                     onClick={this.handleEditClick.bind(this)}>Edit</Button>
+                  <Button id='delete-todo-btn' bsStyle='danger' onClick={this.handleDeleteTodo.bind(this)}>Delete</Button>
           </ButtonGroup>
         </td>
       </tr>
@@ -64,8 +70,18 @@ function mapStateToProps() {
   return {  }
 }
 
-function mapDispatchToProps() {
-  return {}
+function mapDispatchToProps(dispatch) {
+  return {
+    deleteTodo: id => {
+      dispatch(deleteTodo(id))
+    },
+    changeTodoStatus: id => {
+      dispatch(toggleTodo(id))
+    },
+    onEditClick: id => {
+      dispatch(openModal({type: UPDATE_TODO, editing_id: id}))
+    }
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ToDo)

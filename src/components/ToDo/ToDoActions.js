@@ -7,11 +7,12 @@ export const UPDATE_TODO  = 'UPDATE_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const DELETE_TODO = 'DELETE_TODO';
 
-export function addTodo(text, due_date) {
+export function addTodo(text, due_date, id) {
   return {
     type: ADD_TODO,
     text,
-    due_date
+    due_date,
+    id
   }
 }
 
@@ -22,10 +23,10 @@ export function toggleTodo(index) {
   }
 }
 
-export function deleteTodo(index) {
+export function deleteTodo(id) {
   return {
     type: DELETE_TODO,
-    index
+    id
   }
 }
 

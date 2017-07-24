@@ -8,12 +8,12 @@ import { setVisibilityFilter, VISIBILITY_FILTERS } from '../Filters/FiltersActio
 
 const {ADD_TODO} = MODAL_TYPES;
 
-let FiltersBar = ({ dispatch, onAddTodoClick, onFilterSelect }) => {
+let FiltersBar = ({ dispatch, onAddTodoClick, onFilterSelect, next_id }) => {
   let title = 'Select Filter'
   let filters = []
   function handleAddToDoClick(e) {
     e.preventDefault();
-    onAddTodoClick();
+    onAddTodoClick(next_id);
   }
 
   function handleFilterSelect(eventKey, e) {
@@ -50,7 +50,9 @@ let FiltersBar = ({ dispatch, onAddTodoClick, onFilterSelect }) => {
 }
 
 function mapStateToProps(state, ownProps) {
-  return {}
+  return {
+    next_id: state.next_id
+  }
 }
 
 function mapDispatchToProps(dispatch,ownProps) {

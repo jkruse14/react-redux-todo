@@ -44,12 +44,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    changeTodoStatus: id => {
-      dispatch(toggleTodo(id))
-    },
-    onEditClick: id => {
-      dispatch(openModal({type: UPDATE_TODO, editing_id: id}))
-    }
+
   }
 }
 

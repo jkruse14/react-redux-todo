@@ -4,6 +4,7 @@ import { Button, ControlLabel, FormGroup, FormControl, Modal } from 'react-boots
 import { connect } from 'react-redux'
 import { ADD_TODO, UPDATE_TODO, addTodo, updateTodo } from '../ToDo/ToDoActions'
 import { closeModal } from '../Modals/ModalsActions'
+import {incrementNextId} from '../AppActions'
 
 const today = moment().format('YYYY-MM-DD')
 
@@ -47,7 +48,8 @@ class AddToDo extends React.Component {
     }
 
     if(this.state.action === ADD_TODO) {
-      this.dispatch(addTodo(this.state.input_text, this.state.input_date))
+      this.dispatch(addTodo(this.state.input_text, this.state.input_date, this.state.id))
+      this.dispatch(incrementNextId())
     } else if(this.state.action === UPDATE_TODO) {
       let todo = {
         id: this.state.id,
@@ -157,7 +159,7 @@ function mapStateToProps(state, ownProps) {
     text: state.modal.type === UPDATE_TODO ? state.todos[state.modal.editing_id].text : '',
     due_date: state.modal.type === UPDATE_TODO ? state.todos[state.modal.editing_id].due_date : today,
     action: state.modal.type,
-    id: state.modal.type === UPDATE_TODO ? state.modal.editing_id : state.todos.length
+    id: state.modal.type === UPDATE_TODO ? state.modal.editing_id : state.AppData.next_id
   }
 }
 
