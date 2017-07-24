@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1500841407960" clover="3.2.0">
+  <project timestamp="1500841407960" name="All files">
+    <metrics statements="68" coveredstatements="60" conditionals="30" coveredconditionals="20" methods="24" coveredmethods="18" elements="122" coveredelements="98" complexity="0" loc="68" ncloc="68" packages="4" files="8" classes="8">
+      <package name="Filters">
+        <metrics statements="10" coveredstatements="10" conditionals="5" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <file name="FiltersActions.js" path="/home/jkruse/workspace/react-redux-todo/src/components/Filters/FiltersActions.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="12" count="5" type="stmt"/>
+        </file>
+        <file name="FiltersReducers.js" path="/home/jkruse/workspace/react-redux-todo/src/components/Filters/FiltersReducers.js">
+          <metrics statements="7" coveredstatements="7" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="10" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="12" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="Modals">
+        <metrics statements="14" coveredstatements="13" conditionals="8" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <file name="ModalsActions.js" path="/home/jkruse/workspace/react-redux-todo/src/components/Modals/ModalsActions.js">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+        </file>
+        <file name="ModalsReducers.js" path="/home/jkruse/workspace/react-redux-todo/src/components/Modals/ModalsReducers.js">
+          <metrics statements="8" coveredstatements="7" conditionals="8" coveredconditionals="6" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="6" count="6" type="cond" truecount="3" falsecount="0"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="10" count="4" type="cond" truecount="3" falsecount="1"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="ToDo">
+        <metrics statements="34" coveredstatements="30" conditionals="17" coveredconditionals="10" methods="13" coveredmethods="10"/>
+        <file name="ToDo.js" path="/home/jkruse/workspace/react-redux-todo/src/components/ToDo/ToDo.js">
+          <metrics statements="12" coveredstatements="8" conditionals="8" coveredconditionals="2" methods="6" coveredmethods="3"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="24" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="54" count="2" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
+        </file>
+        <file name="ToDoActions.js" path="/home/jkruse/workspace/react-redux-todo/src/components/ToDo/ToDoActions.js">
+          <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="3" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="5" type="stmt"/>
+          <line num="7" count="5" type="stmt"/>
+          <line num="8" count="5" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+        </file>
+        <file name="ToDoReducers.js" path="/home/jkruse/workspace/react-redux-todo/src/components/ToDo/ToDoReducers.js">
+          <metrics statements="12" coveredstatements="12" conditionals="9" coveredconditionals="8" methods="3" coveredmethods="3"/>
+          <line num="7" count="7" type="cond" truecount="4" falsecount="0"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="20" count="3" type="stmt"/>
+          <line num="22" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="23" count="3" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
+          <line num="36" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="37" count="2" type="stmt"/>
+          <line num="42" count="2" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="ToDoList">
+        <metrics statements="10" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+        <file name="ToDoList.js" path="/home/jkruse/workspace/react-redux-todo/src/components/ToDoList/ToDoList.js">
+          <metrics statements="10" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="36" count="5" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
