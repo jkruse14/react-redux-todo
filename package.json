@@ -1,6 +1,6 @@
 {
   "name": "jpk-react-redux-todo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "simple todo list to learn react redux",
   "main": "index.js",
   "repository": "https://github.com/jkruse14/react-redux-todo",
