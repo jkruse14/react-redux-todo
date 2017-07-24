@@ -1,10 +1,17 @@
 import React from 'react';
 import { Provider } from 'react-redux'
-import { createStore } from 'redux';
+import { createMockStore } from 'redux-test-utils';
 import { shallow, render } from 'enzyme';
 import VisibleTodoList from './VisibleToDoList.js';
-import todoApp from '../../todoApp';
-let store = createStore(todoApp);
+import {shallowWithStore} from '../../TestUtils/TestUtils'
+
+let testState = {
+  visibilityFilter: 'SHOW_ALL',
+  todos: [],
+  AppData: {next_id: 0},
+  modal: 'NONE'
+}
+let store = createMockStore(testState);
 
 import {
   setVisibilityFilter,
@@ -29,19 +36,25 @@ for(let i = 0; i < 7; i++) {
   )
 }
 
-function getInitialState() {
-  return {todos: todos}
-}
+testState.todos = todos;
 
-let provider_wrapper = render(
-  <Provider store={store}>
-    <VisibleTodoList todos={todos} />
-  </Provider>
-)
+let component = shallowWithStore(<VisibleTodoList />, store)
+component.setState({todos: todos, visibilityFilter: store.visibilityFilter})
 
-let list_wrapper = provider_wrapper.find(VisibleTodoList)
-provider_wrapper.state({todos: todos})
+test('should render VisibleTodoList', () =>{
+  expect(component).toBeTruthy();
+})
 
 test('Should show all todos', () => {
-  expect(true).toEqual(true);
+  expect(component.state().todos.length).toBe(7)
 });
+
+// test('Should show completed todos', () => {
+//   testState.visibilityFilter = 'SHOW_COMPLETED'
+//   testState.todos = todos
+//   console.log(testState)
+//   store = createMockStore(testState)
+//   component = shallowWithStore(<VisibleTodoList />, store)
+//   console.log(component.state())
+//   expect(component.state().todos.length).toBe(3)
+// });

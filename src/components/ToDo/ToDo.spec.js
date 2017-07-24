@@ -2,7 +2,7 @@ import React from 'react';
 import { ToDo } from './ToDo';
 import { shallow, render } from 'enzyme'
 
-  let actionsButtons = ['#toggle-complete-btn', '#show-updatetodo-modal']
+  let actionsButtons = ['#toggle-complete-btn', '#show-updatetodo-modal', '#delete-todo-btn']
 
   function getButtonText(btn_id) {
     return todo_wrapper.find(btn_id).node.props.children.join('')

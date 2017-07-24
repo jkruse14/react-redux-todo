@@ -29,7 +29,7 @@ test('should return an action with type TOGGLE_TODO and an index', () => {
 test('should return an action with type DELETE_TODO and an index', () => {
   let expected = {
     type: 'DELETE_TODO',
-    index: 1
+    id: 1
   }
   expect(deleteTodo(1)).toEqual(expected);
 });

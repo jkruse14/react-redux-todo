@@ -21,6 +21,7 @@ test('should add a todo with supplied text, due_date, and completed set to false
     type: ADD_TODO,
     text: 'test',
     due_date: '2017-07-19',
+    id: 0
   }
 
   let expected = {
@@ -147,4 +148,30 @@ test('should update only one todo based on id of input todo ', () => {
   state = todos(state, action)
   expect(state[0].text).toEqual(expected.text)
   expect(state[1].text).toEqual('test one')
+})
+
+test('should remove one todo ', () => {
+  state = [
+    {
+      id: 0,
+      text: 'test',
+      due_date: '2017-07-19',
+      completed: false
+    },{
+      id: 1,
+      text: 'test one',
+      due_date: '2017-07-19',
+      completed: false
+    }
+
+  ]
+
+  action = {
+    type: DELETE_TODO,
+    id: 0
+  }
+
+  state = todos(state, action)
+  expect(state.length).toEqual(1)
+  expect(state[0].id).toEqual(1)
 })

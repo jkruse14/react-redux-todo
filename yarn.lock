@@ -3758,6 +3758,10 @@ redent@^1.0.0:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
 
+redux-test-utils@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/redux-test-utils/-/redux-test-utils-0.1.2.tgz#80c74d6ce0d2154e14f47b1e3f3a8dd6436a74e1"
+
 redux@^3.7.2:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"

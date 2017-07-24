@@ -8,6 +8,7 @@ class ToDoList extends React.Component {
 //= ({todos, onToDoClick, onEditClick}) => {
   constructor(props) {
     super(props)
+    console.log(props.todos)
     this.state = {
       todos: props.todos,
     }
